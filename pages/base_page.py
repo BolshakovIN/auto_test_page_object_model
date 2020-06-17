@@ -1,4 +1,4 @@
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, NoAlertPresentException
 import math
 import time
 
@@ -27,11 +27,14 @@ class BasePage():
 		x = alert.text.split(" ")[2]
 		answer = str(math.log(abs((12 * math.sin(float(x))))))
 		alert.send_keys(answer)
+		time.sleep(1)
 		alert.accept()
 		try:
 			alert = self.browser.switch_to.alert
 			alert_text = alert.text
 			print(f"Your code: {alert_text}")
+			time.sleep(1)
 			alert.accept()
+			time.sleep(1)
 		except NoAlertPresentException:
 			print("No second alert presented")
