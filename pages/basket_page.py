@@ -4,7 +4,7 @@ from .locators import BasketPageLocators
 
 class BasketPage(BasePage):
     def basket_should_be_empty(self):
-        assert self.is_not_element_present(BasketPageLocators.BASKET_GOOD), \
+        assert self.is_not_element_present(*BasketPageLocators.BASKET_GOOD), \
             "There should be no items in the list"
 
     def text_basket_should_be_present(self):
