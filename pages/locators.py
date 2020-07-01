@@ -5,9 +5,13 @@ class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
-class LoginPageLocators:
+class LoginPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#id_login-username")
     REGISTER_LINK = (By.CSS_SELECTOR, "#id_registration-email")
+    EMAIL = (By.ID, 'id_registration-email')
+    PASSWORD_1 = (By.ID, 'id_registration-password1')
+    PASSWORD_2 = (By.ID, 'id_registration-password2')
+    SUBMIT = (By.NAME, 'registration_submit')
 
 
 class ProductPageLocators():
@@ -23,6 +27,7 @@ class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     BASKET_LINK = (By.CSS_SELECTOR, '#default > header > div.page_inner > div > div.basket-mini.pull-right.hidden-xs > span > a')
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
 class BasketPageLocators():
