@@ -39,7 +39,6 @@ class TestUserAddToBasketFromProductPage():
                                         pytest.param(7, marks=pytest.mark.xfail),
                                         8, 9])
 def test_guest_can_add_product_to_basket(browser, promo_code):
-    # link = 'http://selenium1py.pythonanywhere.com/ru/catalogue/the-shellcoders-handbook_209/?promo=newYear'
     link = f'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{promo_code}'
     page = ProductPage(browser, link)
     page.open()
